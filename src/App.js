@@ -7,7 +7,7 @@ import './App.css';
 
 
 function App() {
-//                                                                
+  //                                                                
   const [leftName, setLeftName] = useState(["James", "Hasan", "Ayeb"]);
 
   const [rightName, setRightName] = useState(["Happy", "Super", "Nice"])
@@ -54,7 +54,7 @@ function App() {
     setLeftBoxClickedItems(newLeftSideStates)
     setRightBoxClickedItems(newRightSideStates)
   }
-//-------------------------------------------------------------------------------------------------
+  //-------------------------------------------------------------------------------------------------
   const goLeft = () => {
     let newNamesGoLeft = [];
     let rightSideArray = [];
@@ -70,7 +70,7 @@ function App() {
       }
       else {
         rightSideArray.push(rightName[i]);
-       newRightSideStates.push(rightCheckBoxArray[i]);
+        newRightSideStates.push(rightCheckBoxArray[i]);
       }
     }
     setLeftName(leftName.concat(newNamesGoLeft));
@@ -91,12 +91,12 @@ function App() {
 
         <div style={{ float: "left", paddingLeft: "20px" }}>
 
-          {leftName.map((it em, index) =>
+          {leftName.map((item, index) =>
             <div>
-              <input type="checkbox" id={"l"+index} checked={leftBoxClickedItems[index]}
+              <input type="checkbox" id={"l" + index} checked={leftBoxClickedItems[index]}
                 key={index} onChange={(e) => { leftBoxChecked(e, index) }}></input>
 
-              <label for={"l"+index}>{item}</label><br></br></div>
+              <label for={"l" + index}>{item}</label><br></br></div>
           )}
         </div>
 
@@ -110,7 +110,7 @@ function App() {
 
           {rightName.map((item, index) =>
             <div>
-              <input type="checkbox" id = {index} checked={rightBoxClickedItems[index]}
+              <input type="checkbox" id={index} checked={rightBoxClickedItems[index]}
                 key={index} onChange={(e) => { rightBoxChecked(e, index) }}></input>
 
               <label for={index}>{item}</label><br></br></div>
